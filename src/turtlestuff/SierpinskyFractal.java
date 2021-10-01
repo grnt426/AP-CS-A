@@ -19,6 +19,7 @@ public class SierpinskyFractal {
 		if(level == 0) {
 			t.up();
 			t.goTo(x, y);
+			colorize(x, y);
 			t.down();
 			t.forward(length);
 			t.left(120);
@@ -36,5 +37,16 @@ public class SierpinskyFractal {
 		fractal(x, y, length, level);
 		fractal(x + length / 2, (int) (y + (1.0/2.0 * Math.sqrt(3) * length)), length, level); // replace with thing in turtlestuff.Turtle that calcs step for y
 		fractal(x + length, y, length, level);
+	}
+
+	public void colorize(int x, int y) {
+		int red = (int) Math.min(255, 255 * (1 - ((x + 600.0) / 1180.0)));
+		int green = (int) Math.min(255, 255 * ((y + 500.0) / 1018.0));
+		int blue = (int) Math.min(255, 255 * ((x + 600.0) / 1180.0));
+		try {
+			t.penColor(red, green, blue);
+		} catch(IllegalArgumentException e) {
+			System.out.println("Color: " + red + " " + green + " " + blue);
+		}
 	}
 }
