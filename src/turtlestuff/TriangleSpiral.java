@@ -2,7 +2,14 @@ package turtlestuff;
 
 public class TriangleSpiral {
 
+	static int[] colors = new int[512];
+
 	public static void main(String[] args) throws InterruptedException {
+
+		for(int i = 0; i < 512; i++) {
+			colors[i] = i < 256 ? i : 256 - (i - 255);
+		}
+
 		Turtle t = new Turtle(1300, 1300);
 		t.left(90);
 		t.speed(50);
@@ -22,6 +29,7 @@ public class TriangleSpiral {
 
 	public static void drawSpiral(Turtle t, int angle, int step, double stepFactor, int lines) {
 		for(int i = 0; i < lines; i++) {
+			t.penColor(colors[(i+70)  % 512], colors[(i+140)  % 512], colors[(i+210)  % 512]);
 			t.forward(step * i * stepFactor);
 			t.left(angle);
 		}
