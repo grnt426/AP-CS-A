@@ -7,10 +7,22 @@ public class TriangleSpiral {
 		t.left(90);
 		t.speed(50);
 
-		double angle = 61;
-		double stepFactor = .4;
-		for(int i = 0; i < 700; i++) {
-			t.forward(3 * i * stepFactor);
+		// Draw triangular
+		drawSpiral(t, 121, 4, 1.0, 600);
+//
+//		// Draw Square
+//		drawSpiral(t, 91, 3, 1.0, 700);
+//
+//		// Draw Hexagonal
+//		drawSpiral(t, 61, 3, .3, 800);
+
+		// Draw Pentagon
+//		drawSpiral(t, 71, 3, .5, 800);
+	}
+
+	public static void drawSpiral(Turtle t, int angle, int step, double stepFactor, int lines) {
+		for(int i = 0; i < lines; i++) {
+			t.forward(step * i * stepFactor);
 			t.left(angle);
 		}
 	}
