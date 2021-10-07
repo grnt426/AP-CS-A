@@ -1,5 +1,7 @@
 package turtlestuff;
 
+import turtlestuff.turtle.Turtle;
+
 public class SierpinskyFractal {
 
 	private final Turtle t;
@@ -43,7 +45,7 @@ public class SierpinskyFractal {
 		level--;
 
 		fractal(x, y, length, level);
-		fractal(x + length / 2, (int) (y + (1.0/2.0 * Math.sqrt(3) * length)), length, level); // replace with thing in turtlestuff.Turtle that calcs step for y
+		fractal(x + length / 2, (int) (y + (1.0/2.0 * Math.sqrt(3) * length)), length, level);
 		fractal(x + length, y, length, level);
 	}
 

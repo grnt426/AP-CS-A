@@ -1,5 +1,7 @@
 package turtlestuff;
 
+import turtlestuff.turtle.Turtle;
+
 public class Snowflake {
 
 	Turtle t;

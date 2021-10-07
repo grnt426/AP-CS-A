@@ -1,4 +1,4 @@
-package turtlestuff; /*************************************************************************
+package turtlestuff.turtle; /*************************************************************************
  *  Compilation:  javac StdDraw.java
  *  Execution:    java StdDraw
  *
@@ -197,7 +197,7 @@ public final class ScreenDraw implements ActionListener, MouseListener, MouseMot
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            // closes all windows
 		// frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);      // closes only current window
-		frame.setTitle("My turtlestuff.Turtle");
+		frame.setTitle("My turtlestuff.trutle.Turtle");
 		frame.setJMenuBar(createMenuBar());
 		frame.pack();
 		frame.requestFocusInWindow();

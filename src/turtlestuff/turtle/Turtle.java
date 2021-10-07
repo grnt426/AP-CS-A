@@ -1,4 +1,4 @@
-package turtlestuff; /************************************************
+package turtlestuff.turtle; /************************************************
  *AUTHOR: NICHOLAS SEWARD
  *LICENSE: BSD (USE THIS HOWEVER YOU SEE FIT.)
  *DATE: 7/19/2011
@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * The turtlestuff.Turtle class allows the user to create turtle graphics.
+ * The Turtle class allows the user to create turtle graphics.
  * <a href="http://en.wikipedia.org/wiki/Turtle_graphics">http://en.wikipedia.org/wiki/Turtle_graphics</a>
  *
  * @author	Nicholoas Seward <nicholas.seward@gmail.com>
@@ -184,21 +184,21 @@ public class Turtle {
 	}
 
 	/**
-	 * Picks the turtlestuff.Turtle's tail up so it won't draw on the screen as it moves.
+	 * Picks the Turtle's tail up so it won't draw on the screen as it moves.
 	 */
 	public void up() {
 		isPenDown = false;
 	}
 
 	/**
-	 * Lowers the turtlestuff.Turtle's tail down so it will draw on the screen as it moves.
+	 * Lowers the Turtle's tail down so it will draw on the screen as it moves.
 	 */
 	public void down() {
 		isPenDown = true;
 	}
 
 	/**
-	 * Rotates the turtlestuff.Turtle counterclockwise.
+	 * Rotates the Turtle counterclockwise.
 	 *
 	 * @param delta an angle in degrees.
 	 */
@@ -208,7 +208,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Rotates the turtlestuff.Turtle clockwise.
+	 * Rotates the Turtle clockwise.
 	 *
 	 * @param delta an angle in degrees.
 	 */
@@ -218,7 +218,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Moves the turtlestuff.Turtle forward.
+	 * Moves the Turtle forward.
 	 *
 	 * @param step a distance measured in pixels.
 	 */
@@ -236,7 +236,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Places a dot at the turtlestuff.Turtle's present position.
+	 * Places a dot at the Turtle's present position.
 	 */
 	public void dot() {
 		ScreenDraw.setPenRadius(Math.max(penSize + 4, penSize * 2) / 512);
@@ -246,7 +246,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Places a dot at the turtlestuff.Turtle's present position.
+	 * Places a dot at the Turtle's present position.
 	 *
 	 * @param size the width in pixels.
 	 */
@@ -258,7 +258,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Places a dot at the turtlestuff.Turtle's present position.
+	 * Places a dot at the Turtle's present position.
 	 *
 	 * @param size the width in pixels.
 	 * @param color name of a color or a 6-digit hex color string (e.g. "00FF00" for green)
@@ -273,7 +273,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Places a dot at the turtlestuff.Turtle's present position.
+	 * Places a dot at the Turtle's present position.
 	 *
 	 * @param color name of a color or a 6-digit hex color string (e.g. "00FF00" for green)
 	 */
@@ -287,7 +287,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Write text centered a the turtlestuff.Turtle's current position.
+	 * Write text centered a the Turtle's current position.
 	 *
 	 * @param text message to be written on the screen.
 	 */
@@ -297,7 +297,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Write text centered a the turtlestuff.Turtle's current position.
+	 * Write text centered a the Turtle's current position.
 	 *
 	 * @param text message to be written on the screen.
 	 * @param angle the angle in degrees that the text is rotated counterclockwise.
@@ -321,7 +321,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Sets the delay in milliseconds between execution of turtlestuff.Turtle commands.
+	 * Sets the delay in milliseconds between execution of Turtle commands.
 	 *
 	 * @param t the delay in milliseconds.
 	 */
@@ -330,7 +330,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Moves the turtlestuff.Turtle backwards.
+	 * Moves the Turtle backwards.
 	 *
 	 * @param step a distance measured in pixels.
 	 */
@@ -339,7 +339,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Moves the turtlestuff.Turtle to a specified position.  This will result in a line being drawn if the tail is down.
+	 * Moves the Turtle to a specified position.  This will result in a line being drawn if the tail is down.
 	 *
 	 * @param x x coordinate.
 	 * @param y y coordinate.
@@ -356,7 +356,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Rotates the turtlestuff.Turtle to a specified heading. (0 is right. 90 is up.)
+	 * Rotates the Turtle to a specified heading. (0 is right. 90 is up.)
 	 *
 	 * @param angle heading in degrees.
 	 */
@@ -366,7 +366,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Returns the turtlestuff.Turtle to position (0,0) with a heading of 0 degrees.
+	 * Returns the Turtle to position (0,0) with a heading of 0 degrees.
 	 */
 	public void home() {
 		goTo(0, 0);
@@ -383,7 +383,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Sets the color that the turtlestuff.Turtle draws with.
+	 * Sets the color that the Turtle draws with.
 	 *
 	 * @param color name of a color or a 6-digit hex color string (e.g. "00FF00" for green)
 	 */
@@ -393,7 +393,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Sets the color that the turtlestuff.Turtle draws with, allows custom colors.
+	 * Sets the color that the Turtle draws with, allows custom colors.
 	 *
 	 * @param red red as value between 0 - 255
 	 * @param green green as value between 0 - 255
@@ -405,7 +405,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Sets the color that the turtlestuff.Turtle draws with, allows custom colors with alpha channel.
+	 * Sets the color that the Turtle draws with, allows custom colors with alpha channel.
 	 *
 	 * @param red red as value between 0 - 255
 	 * @param green green as value between 0 - 255
@@ -418,7 +418,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Sets the opacity of the color that the turtlestuff.Turtle draws with.
+	 * Sets the opacity of the color that the Turtle draws with.
 	 *
 	 * @param alpha alpha value between 0 - 255 to set as opacity of new pen color
 	 */
@@ -429,7 +429,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Sets the line width that the turtlestuff.Turtle draws.
+	 * Sets the line width that the Turtle draws.
 	 *
 	 * @param size line width in pixels
 	 */
@@ -458,14 +458,14 @@ public class Turtle {
 	/**
 	 * Gets the heading.
 	 *
-	 * @return the angle that the turtlestuff.Turtle is facing in degrees. (0 is right. 90 is up.)
+	 * @return the angle that the Turtle is facing in degrees. (0 is right. 90 is up.)
 	 */
 	public double heading() {
 		return angle;
 	}
 
 	/**
-	 * Gets the distance between the turtlestuff.Turtle's position and another specified position.
+	 * Gets the distance between the Turtle's position and another specified position.
 	 *
 	 * @param x x coordinate
 	 * @param y y coordinate
@@ -475,7 +475,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Gets the heading if the turtlestuff.Turtle was facing the specified position. (0 is right. 90 is up.)
+	 * Gets the heading if the Turtle was facing the specified position. (0 is right. 90 is up.)
 	 *
 	 * @param x x coordinate
 	 * @param y y coordinate
@@ -485,9 +485,9 @@ public class Turtle {
 	}
 
 	/**
-	 * Checks to see if the turtlestuff.Turtle's tail is down.
+	 * Checks to see if the Turtle's tail is down.
 	 *
-	 * @return true if the turtlestuff.Turtle's tail is down.
+	 * @return true if the Turtle's tail is down.
 	 */
 	public boolean isDown() {
 		return isPenDown;
@@ -537,7 +537,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Sets the what turtlestuff.Turtle position will be at the bottom-left and the top-right of the screen.
+	 * Sets the what Turtle position will be at the bottom-left and the top-right of the screen.
 	 *
 	 * @param minx x coordinate of the left side of the screen.
 	 * @param miny y coordinate of the bottom of the screen.
@@ -566,7 +566,7 @@ public class Turtle {
 	}
 
 	/**
-	 * Allows the user to type what they want the turtlestuff.Turtle to do while the turtlestuff.Turtle window is up.
+	 * Allows the user to type what they want the Turtle to do while the Turtle window is up.
 	 */
 	public void interactiveMode() {
 		System.out.println("Welcome to the turtle's interactive mode.  Options: e(x)it,(h)elp.");
@@ -574,7 +574,7 @@ public class Turtle {
 		Scanner sc = new Scanner(System.in);
 		ScriptEngineManager mgr = new ScriptEngineManager();
 		ScriptEngine engine = mgr.getEngineByName("JavaScript");
-		engine.put("turtlestuff.Turtle", this);
+		engine.put("Turtle", this);
 		while (true) {
 			String s = sc.nextLine();
 			if (s.equals("x")) {
@@ -599,7 +599,7 @@ public class Turtle {
 				System.out.println("");
 				continue;
 			}
-			s = "turtlestuff.Turtle." + s;
+			s = "Turtle." + s;
 			try {
 				engine.eval("msg=" + s);
 				engine.eval("println('The turtle obeys.');if(msg) println('The turtle feels compelled to say '+msg+'.  I hope that makes more sense to you.');");
@@ -613,7 +613,7 @@ public class Turtle {
 	}
 
 	/**
-	 * turtlestuff.Turtle demo.
+	 * Turtle demo.
 	 *
 	 * @param args commandline arguments
 	 */
