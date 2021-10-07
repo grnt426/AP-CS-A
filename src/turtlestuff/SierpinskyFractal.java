@@ -10,8 +10,16 @@ public class SierpinskyFractal {
 
 	public static void main(String[] args) {
 		Turtle t = new Turtle(1300, 1300);
-		t.speed(0);
+		t.speed(10);
 		SierpinskyFractal sf = new SierpinskyFractal(t);
+		sf.fractal(-600, -500, 1200, 0);
+		sf.fractal(-600, -500, 1200, 1);
+		sf.fractal(-600, -500, 1200, 2);
+		sf.fractal(-600, -500, 1200, 3);
+		sf.fractal(-600, -500, 1200, 4);
+		t.speed(5);
+		sf.fractal(-600, -500, 1200, 5);
+		t.speed(0);
 		sf.fractal(-600, -500, 1200, 6);
 	}
 

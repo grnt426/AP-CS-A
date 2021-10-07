@@ -15,16 +15,16 @@ public class TriangleSpiral {
 		t.speed(50);
 
 		// Draw triangular
-		drawSpiral(121, 4, 1.0, 600);
+//		drawSpiral(121, 4, 1.0, 600);
 
 		// Draw Square
-//		drawSpiral(t, 91, 3, 1.0, 700);
+//		drawSpiral(91, 3, 1.0, 700);
 
 		// Draw Hexagonal
-//		drawSpiral(t, 61, 3, .3, 800);
+		drawSpiral( 61, 3, .3, 800);
 
 		// Draw Pentagon
-//		drawSpiral(t, 71, 3, .5, 800);
+//		drawSpiral(71, 3, .5, 800);
 	}
 
 	public static void drawSpiral(int angle, int step, double stepFactor, int lines) {
