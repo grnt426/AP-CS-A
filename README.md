@@ -13,12 +13,4 @@ This package shows three different kinds of fractal algorithms that can be drawn
 with Turtle. The Turtle tool allows students to draw lines and shapes on the screen by
 telling a turtle to move around.
 
-Sierpinsky Fractal shows a triangle recursively sub-divided.
-
-Snowflake is an animation of a modified Koch Snowflake that illustrates how the fractal
-looks when triangles are drawn on the sides of a triangle.
-
-TriangleSpiral draws slightly irregular polygons with increasing side length and minor
-rotation to create a spiral.
-
-**Requirements**: All can be run self-contained with Java 11.
+See images and more here: https://github.com/grnt426/AP-CS-A/wiki/TurtleStuff-Package
