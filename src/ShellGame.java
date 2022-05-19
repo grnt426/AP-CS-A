@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Arrays;
 
 public class ShellGame {
 
@@ -17,12 +18,14 @@ public class ShellGame {
 		}
 
 		// The number of correct guesses for each initial shell location
+		// scores[0] is NEVER USED and ignored. Pebbles can only be under shells 1-3
 		int[] scores = {0, 0, 0, 0};
 
 		// Try the pebble under each shell location (1, 2, and 3)
 		for(int i = 1; i < 4; i++) {
 
 			// Set the pebble to the location where we are hiding it this round
+			// location[0] is NEVER USED and ignored. Shells are numbered 1-3
 			boolean[] location = {false, false, false, false};
 			location[i] = true;
 
@@ -33,11 +36,12 @@ public class ShellGame {
 				int left = Integer.parseInt(swapData[0]);
 				int right = Integer.parseInt(swapData[1]);
 
+				// perform the swap
 				boolean temp = location[left];
 				location[left] = location[right];
 				location[right] = temp;
 
-				// We get a point for the original starting position if the pebble is still there
+				// We get a point for the original starting position if the pebble is where we guessed it
 				if(location[guess]) {
 					scores[i]++;
 				}
@@ -45,10 +49,7 @@ public class ShellGame {
 		}
 
 		// Now, just find the maximum score
-		int max = 0;
-		for(int s : scores)
-			max = Math.max(max, s);
-
+		int max = Arrays.stream(scores).max().getAsInt();
 		System.out.println(max);
 	}
 }
