@@ -41,7 +41,8 @@ public class ShellGame {
 				location[left] = location[right];
 				location[right] = temp;
 
-				// We get a point for the original starting position if the pebble is where we guessed it
+				// We get a point for the original starting position
+				// if the pebble is where we guessed where it is right now
 				if(location[guess]) {
 					scores[i]++;
 				}
